@@ -1,2 +1,0 @@
-plugin create temlate of blog category and return it in json
-blog.php in htm remade with ajax call for plugin
