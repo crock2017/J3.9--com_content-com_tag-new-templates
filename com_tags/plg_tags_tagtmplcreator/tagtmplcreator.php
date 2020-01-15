@@ -114,7 +114,7 @@ class plgtagstagtmplcreator extends JPlugin {
 			if ($matches_playlistid[1]){ 
 		//for v3 API google
 				// request ytb data
-				$API_key = 'AIzaSyCxzaPN-N0wnZxgusmfWuv7tQoMiX3A9Do';
+				$API_key = 'YOUR GOOGLE API key';		//add your google api key
 				$url = 'https://www.googleapis.com/youtube/v3/playlistItems?playlistId='.$matches_playlistid[1].'&maxResults=1&part=snippet&key='.$API_key;
 				
 				$playlistitems = json_decode(file_get_contents($url), true);
