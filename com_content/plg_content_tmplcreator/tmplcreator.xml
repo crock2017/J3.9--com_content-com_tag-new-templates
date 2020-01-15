@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+/**
+
+ * @copyright	Copyright (c) 2018 Crock. All rights reserved.
+
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+
+ */
+
+-->
+
+<extension type="plugin" version="3.0" group="content" method="upgrade">
+
+	<name>plg_content_tmplcreator</name>
+
+	<author></author>
+
+	<creationDate>May 2018</creationDate>
+
+	<copyright>Copyright (c) 2018 Crock. All rights reserved.</copyright>
+
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<authorEmail></authorEmail>
+
+	<authorUrl></authorUrl>
+
+	<version>1.0.0</version>
+
+	<description>
+
+	<![CDATA[
+
+		
+
+	]]>
+
+	</description>
+
+
+
+	<files>
+
+		<filename plugin="tmplcreator">tmplcreator.php</filename>
+
+		<filename>index.html</filename>
+
+	</files>
+
+
+
+	<languages>
+
+		<language tag="en-GB">en-GB.plg_content_tmplcreator.ini</language>
+
+		<language tag="en-GB">en-GB.plg_content_tmplcreator.sys.ini</language>
+
+	</languages>
+
+
+
+	<config>
+
+		<fields name="params">
+
+			<fieldset name="basic">
+
+
+
+				
+
+				<!-- crock -->
+
+		<field
+
+					name="spacer_psrv_blog"
+
+					type="spacer"
+
+					label="&lt;hr/&gt;Custom Pagination params: &lt;hr/&gt;"
+
+					
+
+					></field>
+
+	<!--			<field name="tag_list_orderby"
+
+					type="list"
+
+					default="title"
+
+					label="JGLOBAL_FIELD_FIELD_ORDERING_LABEL"
+
+					description="JGLOBAL_FIELD_FIELD_ORDERING_DESC">
+
+						<option value="c.core_title">JGLOBAL_TITLE</option>
+
+						<option value="match_count">COM_TAGS_MATCH_COUNT</option>
+
+						<option value="c.core_created_time">JGLOBAL_CREATED_DATE</option>
+
+						<option value="c.core_modified_time">JGLOBAL_MODIFIED_DATE</option>
+
+						<option value="c.core_publish_up">JGLOBAL_PUBLISHED_DATE</option>
+
+				</field>
+
+
+
+				<field 
+
+					name="tag_list_orderby_direction" 
+
+					type="radio" 
+
+					class="btn-group btn-group-yesno"
+
+					description="JGLOBAL_ORDER_DIRECTION_DESC"
+
+					label="JGLOBAL_ORDER_DIRECTION_LABEL"
+
+					default="ASC"
+
+				>
+
+						<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+
+						<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+
+				</field>
+
+					-->
+
+						<field 
+
+					name="orderby_sec"
+
+					type="list"
+
+					label="JGLOBAL_ARTICLE_ORDER_LABEL"
+
+					description="JGLOBAL_ARTICLE_ORDER_DESC"
+
+					default="rdate"
+
+					>
+
+					<option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+
+					<option value="date">JGLOBAL_OLDEST_FIRST</option>
+
+					<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+
+					<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+
+					<option value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+
+					<option value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+
+					<option value="hits">JGLOBAL_MOST_HITS</option>
+
+					<option value="rhits">JGLOBAL_LEAST_HITS</option>
+
+					<option value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+
+					<option value="rorder">JGLOBAL_ARTICLE_MANAGER_REVERSE_ORDER</option>
+
+					<option value="vote" requires="vote">JGLOBAL_VOTES_DESC</option>
+
+					<option value="rvote" requires="vote">JGLOBAL_VOTES_ASC</option>
+
+					<option value="rank" requires="vote">JGLOBAL_RATINGS_DESC</option>
+
+					<option value="rrank" requires="vote">JGLOBAL_RATINGS_ASC</option>
+
+				</field>
+
+
+
+				<field 
+
+					name="order_date" 
+
+					type="list"
+
+					label="JGLOBAL_ORDERING_DATE_LABEL"
+
+					description="JGLOBAL_ORDERING_DATE_DESC"
+
+					showon="orderby_sec:rdate,date"
+
+					default="published"
+
+					>
+
+					<option value="created">JGLOBAL_CREATED</option>
+
+					<option value="modified">JGLOBAL_MODIFIED</option>
+
+					<option value="published">JPUBLISHED</option>
+
+				</field>
+
+					
+
+					
+
+				<field
+
+					name="cat_list_item_start_psrv"
+
+					type="text"
+
+					label="begin item on start page"
+
+					description="if you want to start from first item set '0'"
+
+					default='0'
+
+					></field>
+
+				<field
+
+					name="cat_list_item_page_psrv"
+
+					type="text"
+
+					label="item limit on start page"
+
+					description="number of items on start page"
+
+					default='10'
+
+					></field>
+
+				<field
+
+					name="cat_list_item_add_page_psrv"
+
+					type="text"
+
+					label="number of items on next page"
+
+					description="if you want to start from first item set '0'"
+
+					default='10'
+
+					></field>
+
+				<field
+
+					name="cat_list_item_background"
+
+					type="color"
+
+					label="background color of item"
+
+					description="please set background color on list of items"
+
+					default="#ebebeb"
+
+					
+
+					
+
+					></field>
+
+		
+
+				
+
+				
+
+			</fieldset>
+
+		</fields>
+
+	</config>
+
+</extension>
